@@ -1,0 +1,35 @@
+
+
+<div class="contacts">
+    <div class="title">
+        <h2>Contacts</h2>
+    </div>
+<ul class="favorite-contacts">
+    <div class="subtitle"><h5 class="subtitle">FAVORITE CONTACTS</h5></div>
+    <ng-container *ngFor = "let contact of contacts">
+    <li *ngIf ="contact.isFavorite"
+    [class.selected]="contact === selectedContact" 
+    (click)="onSelect(contact)">
+        <img src="{{contact.smallImageURL}}" appOnError = "\assets\User Icon Small.png" alt="contact-image">
+        <div class="contact-info">
+            <h3 class="contact-name">⭐{{contact.name}}</h3>
+            <p class="contact-company">{{contact.companyName}}</p>
+        </div>
+    </li>
+    </ng-container> 
+</ul>
+<ul class="regular-contacts">
+    <div class="subtitle"><h5 class="subtitle">OTHER CONTACTS</h5></div>
+        <ng-container *ngFor = "let contact of contacts">
+        <li *ngIf ="contact.isFavorite == false" [class.selected]="contact === selectedContact" (click)="onSelect(contact)">
+            <img src="{{contact.smallImageURL}}" alt="contact-image" appOnError = "\assets\User Icon Small.png">
+            <div class="contact-info">
+                    <h3 class="contact-name">{{contact.name}}</h3>
+                    <p class="contact-company">{{contact.companyName}}</p>
+            </div>
+        </li>
+        </ng-container> 
+    </ul>
+</div>
+
+<app-contact-detail [contact]="selectedContact"></app-contact-detail>

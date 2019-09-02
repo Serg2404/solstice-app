@@ -1,0 +1,52 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<div *ngIf="contact" class="contact-details">
+        <div class="header">
+                <div class="top-header">
+                <div class="back-arrow" (click)="backToContacts()"><i class="fa fa-angle-left"></i> Contacts</div>
+                <div class="favorite" (click)="toggleFavorite(contact)">
+                        <ng-container *ngIf="contact.isFavorite"><img src="\assets\Favorite — True.png" alt=""></ng-container>
+                        <ng-container *ngIf="contact.isFavorite == false"><img src="\assets\Favorite — False.png" alt=""></ng-container>
+                </div>
+                </div>
+                <div class="bottom-header">
+                <img src="{{contact.largeImageURL}}" alt="big-image" appOnError = "\assets\User — Large.png">
+                <h2>{{contact.name}}</h2>
+                <h5 style="color: #C2C2C2;">{{contact.companyName}}</h5>
+                </div>
+        </div>
+        <div class="details">
+          <div class="phone-details detail-container" *ngIf="contact.phone.home">
+            <h5 class="phone">PHONE</h5>
+            <div class="inner-details">
+            <h4>{{contact.phone.home}}</h4>
+            <h4 style="float: right;">Home</h4>
+        </div>
+          </div>
+          <div class="phone-details detail-container" *ngIf="contact.phone.mobile">
+            <h5 class="phone">PHONE</h5>
+            <div class="inner-details">
+            <h4>{{contact.phone.mobile}}</h4>
+            <h4 style="float: right;">Mobile</h4>
+        </div>
+          </div>
+          <div class="phone-details detail-container" *ngIf="contact.phone.work">
+            <h5 class="phone">PHONE</h5>
+            <div class="inner-details">
+            <h4>{{contact.phone.work}}</h4>
+            <h4 style="float: right;">Work</h4>
+        </div>
+          </div>
+          <div class="address-details detail-container">
+                  <h5>ADDRESS</h5>
+                  <h4>{{contact.address.street}} <br> {{contact.address.city}}, {{contact.address.state}} {{contact.address.zipcode}}, {{contact.address.country}}</h4>
+          </div>
+          <div class="birthdate-details">
+                  <h5>BIRTHDAY</h5>
+                  <h4>{{contact.birthdate}}</h4>
+          </div>
+          <div class="email-details">
+                  <h5>EMAIL</h5>
+                  <h4>{{contact.emailAddress}}</h4>
+          </div>
+        </div>
+</div>

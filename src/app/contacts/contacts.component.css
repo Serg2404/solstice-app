@@ -1,0 +1,100 @@
+/* contactsComponent's private CSS styles */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.contacts {
+    border: 1px solid lightgrey;
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 34em;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .contacts li {
+    max-height: 87px;
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    display: flex;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 5px;
+  }
+  .contacts li .contact-name{
+    width:100%;
+    color: #57585D;
+  }
+  .favorite-contacts li .contact-company{
+    margin-top: -16px;
+    margin-left: 25px;
+  }
+  .regular-contacts li .contact-company{
+    margin-top: -16px;
+  }
+  .contacts li .contact-company{
+    width:100%;
+    color: #D4D4D4;
+  }
+  .contacts{
+    margin-left:-8px;
+    margin-top: -14px
+  }
+  .title{
+    margin-top:0;
+    margin-bottom: 0px;
+    height: 4em;
+    text-align: center;
+    background-color:F9F9F9;
+    color:#57585D;
+  }
+  .favorite-contacts, .regular-contacts{
+    margin-top:-22px;
+    padding-left:0;
+  }
+
+  .favorite-contacts li:last-child, .regular-contacts li:last-child{
+    margin-bottom: 10px;
+    border-bottom: 0px;
+  }
+  .subtitle{
+    background-color: #F4F4F4;
+    color: #8A8B8D;
+    margin-bottom: 0;
+  }
+  .title h2{
+    padding-top: 30px;
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .title{
+    background-color: #F9F9F9;
+  }
+  .contacts li img{
+      width: 15%;
+      height: 15%;
+      margin-top: 0.3em;
+      margin-right: 2em;
+  }
+  .contacts .badge {
+    display: inline-block;
+    font-size: small;
+    color: white;
+    padding: 0.8em 0.7em 0 0.7em;
+    background-color:#405061;
+    line-height: 1em;
+    position: relative;
+    left: -1px;
+    top: -4px;
+    height: 1.8em;
+    margin-right: .8em;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .subtitle h5{
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left: 20px;
+  }
